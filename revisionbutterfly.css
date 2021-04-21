@@ -1,0 +1,205 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+header{
+  /* setting background color of header */
+  background-color: #ADD8E6; 
+  
+  height: 40%;
+}
+.h1{
+  font-family: 'Pacifico', cursive;  /* font of header logo*/
+  padding-bottom: 35px;
+
+}
+.h1 img{
+  width: 90px;
+  padding-top: 8px;
+
+}
+/* hover effect for the logo image to rotate  180 deg transition when cursor is placed on it */
+.h1 img {
+  transition: transform .3s ease-in-out;
+}
+
+ .h1:hover img{
+  
+  transform: rotate(180deg);
+
+ }
+
+
+/* small login form */
+.form{
+  text-align: right;/* align to right side of the page*/
+  padding-right: 30px;
+   width: 100%;
+   position: absolute;
+   top: 2%;
+}
+#sub{
+  width: 40%;
+}
+
+ 
+.row:after{
+  content: "";
+  display:table;
+  clear: both;
+  
+}
+.column1{
+  float: left;
+  height: 300px;
+  padding-top:  10px;
+  padding-left: 10px;
+  background-color: #FFC83F;/* artcle 1 background color*/
+  width: 61%;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  margin-left: 18px;
+}
+.column1 p{
+  margin-top: 12px;
+}
+.column2{
+  float: left;
+  height: 300px;
+  padding:  10px;
+  background-color:#a2854c;
+  width: 35%;
+  margin-top: 10px;
+  border-radius: 15px;
+  
+  
+}
+.column2 p{
+  margin-left: 2%;
+  margin-top: 15px;
+}
+.column3{
+  float: left;
+  height: 200px;
+  padding:  10px;
+  background-color: #878729;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 15px;
+  margin-left: 15px;
+  margin-right: 5%;
+  }
+  .column3 p{
+    margin-top: 12px;
+  }
+
+  /* Article 3 hover effect using opactity */
+  .column3:hover{
+    opacity: 50%;
+  }
+
+
+.column4{
+  display: flex;
+  flex-flow: row wrap;
+   float: left;
+   width: 20%;
+  padding: 10px;
+  margin: 5px 0;
+   }
+   .card{
+     flex: 1;
+     }
+  
+  
+  .column4 img {
+    
+    width: 200px;
+    padding: 15px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+  .card img:hover{
+    opacity: 0.2;     /* images hover effect*/
+  }
+  
+
+
+  
+  section{
+    float: left; /* aligning section to left of the page*/
+  margin: 0 1.5%;
+  width: 65%;
+  }
+
+  /* Side bar using aside */
+  aside {
+    width: 30%;
+    height: 90%;
+    padding-top: 15px;
+    padding-left: 15px;
+    margin: 15px 10px 10px 10px;
+    float: right;      /*aligns side bar to right of images*/
+    border: 2px solid black;
+    border-radius: 15px;
+  
+    background-color: white; /* background color of aside tp white*/
+  }
+  aside img{ /* responsive image kola*/
+   width: 380;
+   height: 300;
+    max-width:100%;
+    height: auto;
+  } 
+  aside  ul li{
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-left: 30px;
+  }
+  /* shadow hover effect for side bar */
+  aside:hover{
+    box-shadow: 10px 10px gray;  
+  }
+  footer{
+    clear: both; /* places footer at the bottom of the page */
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color:#ADD8E6 ;
+    display: block;
+    justify-content: center;
+    height: 60px;
+  }
+  footer a{
+    text-align: center;
+    font-size: 80%;
+    text-decoration: none;
+    justify-content: center;
+    display: inline-flex;
+    padding: 10px;
+  }
+
+  /*  making web page responsive using media query */
+  @media screen and (max-width:768px){
+    header{width: 110%;}
+    h1 img{float: right; margin-right: 10%; 
+      margin-top: 1; width: 80px;} /* moves logo image to right of header */
+    header form{display: none;} /* form disapperas in mobile view*/
+    .column1 {width: 150%; height: 250px;}
+    .column2{width: 150%; height:200px; float: left; margin-left: 10px;}
+    .column3{width: 150%;}
+    .column4{float: none;} /* sets gallery view to horizontal*/
+    
+    
+    .card img {
+      width: 1000%;
+    }
+    aside{width: 100%; float: left; } 
+    aside img{float: right; width: 120px; height: 120px;}
+    footer a {display: none;}
+    footer{width: 110%;}
+
+  }
+
